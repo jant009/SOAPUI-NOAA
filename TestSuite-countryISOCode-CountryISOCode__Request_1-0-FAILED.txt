@@ -1,0 +1,25 @@
+Status: FAILED
+Time Taken: 6102
+Size: 0
+Timestamp: Tue Sep 01 15:33:58 CEST 2020
+TestStep: CountryISOCode - Request 1
+
+----------------- Messages ------------------------------
+org.apache.http.conn.HttpHostConnectException: Connection to http://FORM304:8088 refused
+
+----------------- Properties ------------------------------
+Endpoint: http://FORM304:8088/mockCountryInfoServiceSoapBinding
+Encoding: UTF-8
+
+---------------- Request ---------------------------
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:CountryISOCode>
+         <web:sCountryName>Bangladesh</web:sCountryName>
+      </web:CountryISOCode>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+---------------- Response --------------------------
+- missing response / garbage collected -

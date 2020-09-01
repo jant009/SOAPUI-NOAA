@@ -1,0 +1,68 @@
+Status: FAILED
+Time Taken: 842
+Size: 718
+Timestamp: Tue Sep 01 15:34:04 CEST 2020
+TestStep: SOAP Request
+
+----------------- Messages ------------------------------
+[Response SLA] Response did not meet SLA 208/200
+[XPath Match IOSCOde] XPathContains comparison failed for path [declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
+//m:FullCountryInfoResponse[1]/m:FullCountryInfoResult[1]/m:sISOCode[1]], expecting [], actual was [null]
+[XPath Match 2 NameCountry] XPathContains comparison failed for path [declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
+//m:FullCountryInfoResponse[1]/m:FullCountryInfoResult[1]/m:sName[1]], expecting [], actual was [Country not found in the database]
+[XPath Match 3 Capital] XPathContains comparison failed for path [declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
+//m:FullCountryInfoResponse[1]/m:FullCountryInfoResult[1]/m:sCapitalCity[1]], expecting [], actual was [null]
+[XPath Match Currency] XPathContains comparison failed for path [declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
+//m:FullCountryInfoResponse[1]/m:FullCountryInfoResult[1]/m:sCurrencyISOCode[1]], expecting [], actual was [null]
+
+----------------- Properties ------------------------------
+Endpoint: http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso
+Encoding: UTF-8
+
+---------------- Request ---------------------------
+Request Headers: SOAPAction : ""
+Connection : Keep-Alive
+User-Agent : Apache-HttpClient/4.1.1 (java 1.5)
+Host : webservices.oorsprong.org
+Accept-Encoding : gzip,deflate
+Content-Length : 324
+Content-Type : text/xml;charset=UTF-8
+
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:FullCountryInfo>
+         <web:sCountryISOCode/>
+      </web:FullCountryInfo>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+---------------- Response --------------------------
+Response Headers: Cache-Control : private, max-age=0
+Server : Microsoft-IIS/8.5
+Content-Encoding : gzip
+Vary : Accept-Encoding
+Web-Service : DataFlex 19.1
+#status# : HTTP/1.1 200 OK
+Content-Length : 431
+Date : Tue, 01 Sep 2020 13:34:05 GMT
+Content-Type : text/xml; charset=utf-8
+
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <m:FullCountryInfoResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo">
+         <m:FullCountryInfoResult>
+            <m:sISOCode/>
+            <m:sName>Country not found in the database</m:sName>
+            <m:sCapitalCity/>
+            <m:sPhoneCode/>
+            <m:sContinentCode/>
+            <m:sCurrencyISOCode/>
+            <m:sCountryFlag/>
+            <m:Languages/>
+         </m:FullCountryInfoResult>
+      </m:FullCountryInfoResponse>
+   </soap:Body>
+</soap:Envelope>
