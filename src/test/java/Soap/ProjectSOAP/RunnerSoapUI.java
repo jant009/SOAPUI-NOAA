@@ -14,7 +14,6 @@ import com.eviware.soapui.model.testsuite.TestCase;
 import com.eviware.soapui.model.testsuite.TestRunner;
 import com.eviware.soapui.model.testsuite.TestSuite;
 import com.eviware.soapui.support.SoapUIException;
-import com.eviware.soapui.tools.SoapUITestCaseRunner;
 
 public class RunnerSoapUI {
 
